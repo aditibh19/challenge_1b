@@ -19,13 +19,7 @@ docker build -t adobe1b .
 * Place all your `Collection 1/`, `Collection 2/`, ... folders in the root directory.
 * Each `Collection X` folder must have a `pdf/` subdirectory with input PDFs, and a `challenge1b_input.json` file.
 
-**3. Add the offline model:**
-
-* The **pre-downloaded model folder** must be present at:
-  `models/all-MiniLM-L6-v2/`
-* This is required for **offline/airgapped** execution (already provided if cloning this repository).
-
-**4. Run the container (Universal Command):**
+**3. Run the container (Universal Command):**
 
 ```bash
 docker run --rm -v "$(Get-Location):/app" -w /app adobe1b
@@ -47,7 +41,7 @@ docker run --rm -v "$(Get-Location):/app" -w /app adobe1b
 
 ### Semantic Relevance Ranking
 
-* Each section is semantically ranked via **sentence-transformers** (`MiniLM-L6-v2`).
+* Each section is semantically ranked using sentence-transformers.
 * Persona and job are combined as a query; relevance is scored using cosine similarity.
 
 ### Granular Subsection Highlighting
@@ -70,7 +64,7 @@ docker run --rm -v "$(Get-Location):/app" -w /app adobe1b
 | Requirement                    | Status      |
 | ------------------------------ | ----------- |
 | CPU-only                       | Yes         |
-| Model size ≤ 1 GB              | \~80MB      |
+| Model size ≤ 1 GB              | Yes         |
 | No internet access             | Fully local |
 | ≤ 60 seconds for 3–5 documents | Optimized   |
 | Strict JSON schema compliance  | Confirmed   |
@@ -103,8 +97,7 @@ CHALLENGE_1B-MAIN/
 │   └── challenge1b_output.json
 ├── Collection 3/
 │   └── ...
-├── models/
-│   └── all-MiniLM-L6-v2/       # Pre-downloaded transformer model (required)
+├
 ├── persona_extract.py          # Main runner (universal, no hardcoded paths)
 ├── section_extractor.py        # PDF section extraction logic
 ├── semantic_ranker.py          # Embedding + scoring
@@ -149,11 +142,11 @@ CHALLENGE_1B-MAIN/
 
 ## Credits
 
-Team: **CodeHers**
+Team: **C0d3Hers**
 
 Developed by: **Aditi Bhalla and Kashvi Rathore**
 
-GitHub: [https://github.com/aditibh19/challenge\_1b](https://github.com/aditibh19/challenge_1b)
+GitHub: https://github.com/aditibh19/challenge_1b.git
 
 ---
 
@@ -162,5 +155,4 @@ GitHub: [https://github.com/aditibh19/challenge\_1b](https://github.com/aditibh1
 This system is **flexible, fast, and hackathon-ready**. It surfaces the "right parts" of any PDF collection for any persona or job-to-be-done — all on CPU, fully offline, and with no folder hardcoding or manual configuration required.
 
 ---
-
 
