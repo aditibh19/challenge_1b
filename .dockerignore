@@ -1,0 +1,27 @@
+# Python virtual env and caches
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+
+# Output and logs
+*.log
+*.zip
+*.tar
+*.tar.gz
+output/
+*.tmp
+*.ipynb
+
+# IDE and editor settings
+.idea/
+.vscode/
+
+# Model directory (avoid overwriting in Docker)
+models/
+
+# Optional: challenge output JSONs (if not needed in image)
+**/challenge1b_output.json

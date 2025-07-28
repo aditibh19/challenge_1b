@@ -1,0 +1,7 @@
+numpy<2
+torch==2.1.2+cpu
+sentence-transformers==2.6.1
+transformers==4.38.2
+pdfplumber
+PyMuPDF
+-f https://download.pytorch.org/whl/cpu/torch_stable.html
