@@ -150,9 +150,3 @@ GitHub: https://github.com/aditibh19/challenge_1b.git
 
 ---
 
-## Final Note
-
-This system is **flexible, fast, and hackathon-ready**. It surfaces the "right parts" of any PDF collection for any persona or job-to-be-done — all on CPU, fully offline, and with no folder hardcoding or manual configuration required.
-
----
-
